@@ -1,0 +1,121 @@
+/* ===== Background ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.kontak-section {
+  height: 100vh;
+  background: url("papandayan.jpeg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Gelap transparan */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* ===== Konten ===== */
+.kontak-container {
+  position: relative;
+  max-width: 700px;
+  background: rgba(255,255,255,0.14);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  animation: slideUp 0.8s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.judul {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+.subjudul {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+.kontak-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kontak-form input,
+.kontak-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.kontak-form input:focus,
+.kontak-form textarea:focus {
+  transform: scale(1.03);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+.kontak-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.kontak-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #007782;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kontak-form button:hover {
+  background: #00a6b6;
+  transform: translateY(-3px);
+}
+
+/* ===== Info Box ===== */
+.info-box {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== Animasi ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+

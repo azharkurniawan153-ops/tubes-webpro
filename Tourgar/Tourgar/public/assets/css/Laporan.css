@@ -1,0 +1,219 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===== BACKGROUND FOTO ===== */
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:url('santolo.webp') no-repeat center center fixed;
+    background-size:cover;
+    overflow-x:hidden;
+}
+
+/* ===== OVERLAY ===== */
+.background-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backdrop-filter:blur(6px);
+    background:rgba(255,255,255,0.20);
+    z-index:0;
+}
+
+/* ===== HERO HEADER ===== */
+.hero-header{
+    position:relative;
+    z-index:2;
+    width:100%;
+    min-height:320px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url('santolo.webp') center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-content h1{
+    color:#fff;
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    color:#f1f1f1;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ===== CONTAINER GRAFIK ===== */
+.container{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+
+    padding:60px 30px;
+}
+
+/* ===== CARD ===== */
+.card{
+    width:480px;
+    background:rgba(255,255,255,0.95);
+
+    padding:30px;
+    border-radius:25px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.15);
+
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.subtitle{
+    font-size:15px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+/* ===== FOOTER ===== */
+.footer-dark{
+    background:linear-gradient(135deg,#0a6f73,#064e4f);
+    color:#e6f7f6;
+
+    margin-top:80px;
+    padding:60px 20px 25px;
+
+    position:relative;
+    z-index:2;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-brand{
+    flex:1 1 240px;
+}
+
+.footer-brand img{
+    width:120px;
+    margin-bottom:12px;
+}
+
+.footer-brand p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.footer-column{
+    flex:1 1 180px;
+}
+
+.footer-column h4{
+    font-size:16px;
+    margin-bottom:16px;
+}
+
+.footer-column h4::after{
+    content:"";
+    display:block;
+    width:40px;
+    height:3px;
+    background:#9ff1ea;
+    margin-top:6px;
+    border-radius:5px;
+}
+
+.footer-column a{
+    display:block;
+    text-decoration:none;
+    color:#d4f1ef;
+    margin-bottom:10px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.footer-column a:hover{
+    color:#fff;
+    transform:translateX(6px);
+}
+
+.footer-column a i{
+    margin-right:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,0.25);
+    font-size:13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .card{
+        width:100%;
+        max-width:500px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-column h4::after{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .footer-column a:hover{
+        transform:none;
+    }
+}
